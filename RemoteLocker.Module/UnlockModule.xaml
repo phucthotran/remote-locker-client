@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="RemoteLocker.Module.UnlockModule"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="Auto" Width="Auto" KeyDown="UserControl_KeyDown">
+    <Border Padding="10" Background="#1957ba" Width="500" BorderThickness="2" BorderBrush="#20aeff">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>            
+            <TextBlock Text="Mã Nhận Dạng" Margin="0, 0, 5, 0" VerticalAlignment="Center" Foreground="White" FontSize="13" Grid.Column="0" Grid.Row="0"/>
+            <TextBox Text="{Binding IdentifyCode}" Height="25" Width="Auto" Margin="0, 5" Padding="3" TextAlignment="Center" Grid.Column="1" Grid.Row="0"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1">
+                <Button Name="bUnlock" Content="Mở Khóa" Margin="5" Padding="5" BorderThickness="1" BorderBrush="#00c140" Background="#17992c" Foreground="White" FontSize="13" Click="bUnlock_Click" />
+                <Button Name="bCancel" Content="Hủy Bỏ" Margin="5" Padding="5" BorderThickness="1" BorderBrush="#00c140" Background="#17992c" Foreground="White" FontSize="13" Click="bCancel_Click" />
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>
